@@ -7,7 +7,8 @@ function init() {
 function getPetData() {
 
     var request = new XMLHttpRequest();
-    request.open("GET", "pets.json");
+    var url = "http://localhost/to-do-list/js/pets.json";
+    request.open("GET", url);
     request.onreadystatechange = function() {
         var div = document.getElementById('pets');
         if (this.readyState == this.DONE && this.status == 200) {
